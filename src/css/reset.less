@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+@font-face
+{
+font-family: SF;
+src: url('../assets/font/SF-UI-Text-Bold.otf'); /* IE9+,可以是具体的实际链接 */
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-family: PingFangSC;
+}
+ul,li,ol,dl,dd {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,p {
+  margin: 0;
+  font-weight: normal;
+}
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    zoom: 1;
+    clear: both;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+.dxy-article-container {
+  text-align: left;
+}
+
