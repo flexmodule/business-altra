@@ -13,6 +13,8 @@
     "fix": "eslint --fix .js, src"
   },
   "dependencies": {
+    "@dxy/cascading-list-v3": "^2.0.11",
+    "@dxy/pure-components": "0.0.29",
     "jquery": "^1.12"
   },
   "devDependencies": {

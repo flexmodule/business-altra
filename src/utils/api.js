@@ -39,5 +39,4 @@ for (let api in apis) {
     })
   }
 }
-
 export default API

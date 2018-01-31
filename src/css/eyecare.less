@@ -30,13 +30,14 @@
           line-height: 85px;
           margin: 63px 0 18px 0;
           color: #01632f;
+          font-family: FZ;
         }
         p {
           width: 608px;
           font-size: 14px;
           line-height: 25px;
           color: #338a5c;
-          margin-bottom: 17px;
+          margin-bottom: 33px;
         }
         .sameban {
           width: 220px;
@@ -44,7 +45,7 @@
           float: left;
           position: relative;
           z-index: 1;
-          margin-top: 30px;
+          margin-top: 20px;
         }
         .banner-r-bl {
           background: url("~@/assets/eyecare/pic-05.png") no-repeat;
@@ -83,6 +84,7 @@
         font-size: 80px;
         line-height: 95px;
         font-family: SF;
+        font-weight: bold;
         color: #d7e8de;  
         position: relative;
         .title-child {
@@ -120,30 +122,25 @@
         color: #338a5c;
         text-align: center;
         margin-bottom: 80px;
-        .sharego {
-          color: #bfbfbf;
-        }
-        a {
-          background-size: cover;
-          width: 24px;
-          height: 24px;
-          margin: 0 5px;
+        #dxy-share {
           display: inline-block;
           vertical-align: middle;
-          &:nth-child(3) {
-            background: url("~@/assets/eyecare/q-q.png") no-repeat;
+          margin-top: 2px;
+          i {
+            margin-right: 4px;
           }
-          &:nth-child(4) {
-            background: url("~@/assets/eyecare/friend.png") no-repeat;
-          }
-          &:nth-child(5) {
-            background: url("~@/assets/eyecare/xinlang.png") no-repeat;
-          }
-          &:nth-child(6) {
-            background: url("~@/assets/eyecare/wechat.png") no-repeat;
-          }
-          &:nth-child(7) {
-            background: url("~@/assets/eyecare/dxy.png") no-repeat;
+          #dxy-share-10000 {
+            .share_btn {
+              font-size: 14px;
+              line-height: 24px;
+            }
+            #j_dxyshare_lst_dxy-share-10000 {
+              a {
+                width: 24px;
+                height: 24px;
+                margin: 0 8px;
+              }
+            }
           }
         }
       }
@@ -164,7 +161,6 @@
           .clip {
             width: 30px;
             height: 30px;
-            background-size: cover;
             float: left;
             margin-right: 8px;
           }
@@ -177,12 +173,15 @@
           }
           .clip-1 {
             background: url("~@/assets/eyecare/clip-1.png") no-repeat;
+            background-size: cover;
           }
           .clip-2 {
             background: url("~@/assets/eyecare/clip-2.png") no-repeat;
+            background-size: cover;
           }
           .clip-3 {
             background: url("~@/assets/eyecare/clip-3.png") no-repeat;
+            background-size: cover;
           }
         }
       }
@@ -422,38 +421,48 @@
     .eye-exp {
       padding: .402rem .16rem .16rem;
       .share {
-        font-size: 14px;
-        line-height: 24px;
+        font-size: .14rem;
+        line-height: .24rem;
         color: #338a5c;
         text-align: center;
         .quantity {
           margin: .17rem 0 .16rem 0;
           display: block;
         }
-        .sharego {
-          display: none;
-        }
-        a {
-          background-size: cover;
-          width: .3rem;
-          height: .3rem;
-          margin: 0 .05rem;
+        #dxy-share {
           display: inline-block;
           vertical-align: middle;
-          &:nth-child(3) {
-            background: url("~@/assets/h5eyecare/q-q.png") no-repeat;
+          margin-top: .02rem;
+          i {
+            display: none;
           }
-          &:nth-child(4) {
-            background: url("~@/assets/h5eyecare/friend.png") no-repeat;
-          }
-          &:nth-child(5) {
-            background: url("~@/assets/h5eyecare/xinlang.png") no-repeat;
-          }
-          &:nth-child(6) {
-            background: url("~@/assets/h5eyecare/wechat.png") no-repeat;
-          }
-          &:nth-child(7) {
-            background: url("~@/assets/h5eyecare/dxy.png") no-repeat;
+          #dxy-share-10000 {
+            .share_btn {
+              font-size: .14rem;
+              line-height: .24rem;
+            }
+            #j_dxyshare_lst_dxy-share-10000 {
+              a {
+                width: .24rem;
+                height: .24rem;
+                margin: 0 .08rem;
+              }
+              #w_xin {
+                width: 2.15rem;
+                right: .16rem!important;
+                .w_center {
+                  width: 2.01rem;
+                  #w_qr {
+                    img {
+                      width: .8rem;
+                    }
+                  }
+                  p {
+                    width: .79rem;
+                  }
+                }
+              }
+            }
           }
         }
       }

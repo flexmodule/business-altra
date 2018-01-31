@@ -29,7 +29,7 @@
               width: 240px;
               height: 228px;
               position: absolute;
-              top: -49px;
+              top: -32px;
               left: 0;
               right: 0;
               margin: auto;
@@ -37,13 +37,14 @@
         }
         .kc-exp-r {
           float: left;
-          margin-top: -20px;
+          margin-top: -6px;
           h3 {
             font-size: 24px;
             line-height: 33px;
             margin-bottom: 16px;
           }
           p {
+            color: #666;
             width: 654px;
             font-size: 14px;
             line-height: 23px;
@@ -57,7 +58,7 @@
             color: #fff;
             text-align: center;
             margin-top: 40px;
-            background: #006d33;
+            background: #006D33;
           }
         }
       }
@@ -77,6 +78,9 @@
           font-family: SF;
           color: #d7e8de;  
           position: relative;
+          .txtback {
+            font-weight: 700;
+          }
           .title-child {
             position: absolute;
             top:0;
@@ -101,7 +105,7 @@
               line-height: 45px;
               color: #000;
             }
-            em {
+            .em {
               display: inline-block;
               vertical-align: middle;
               margin-left: 8px;
@@ -119,6 +123,13 @@
           li {
             float: left;
             border-radius: 8px;
+            transition: all .5s;
+            &:hover {
+              transform: translateZ(10px);
+              perspective: 3000;
+              box-shadow: 15px 15px 10px rgba(0,0,0,.3);
+              transition: all .5s;
+            }
             .stu-li-b {
               padding: 0 24px 22px 24px;
               background: #fff;
@@ -153,6 +164,9 @@
                 display: inline-block;
                 margin-left: 8px;
               }
+              &:hover {
+                color: #006d33;
+              }
             }
             &:nth-child(2) {
               margin-left: 48px;
@@ -163,16 +177,18 @@
             .pic-same {
               width: 368px;
               height: 207px;
-              background-size: cover;
             }
             .study1-img {
               background:url("../assets/home/pic-1.png") no-repeat;
+              background-size: cover;
             }
             .study2-img {
               background:url("../assets/home/pic-2.png") no-repeat;
+              background-size: cover;
             }
             .study3-img {
               background:url("../assets/home/pic-3.png") no-repeat;
+              background-size: cover;
             }
           }
         }
@@ -185,7 +201,8 @@
           float: left;
           width: 493px;
           height: 370px;
-          border-radius: 10px;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
           background: url("../assets/home/pic-4.png") no-repeat;
           background-size: cover;
           margin-right: 38px;
@@ -196,11 +213,13 @@
             font-size: 24px;
             line-height: 33px;
             margin: 51px 0 16px 0;
+            color: #333;
           }
           p {
             width: 631px;
             font-size: 14px;
             line-height: 23px;
+            color: #666;
           }
           .join-dis {
             display: block;
@@ -249,15 +268,16 @@
         .kc-exp-r {
           margin-top: .24rem;
           h3 {
+            color: #333;
             font-size: .24rem;
             text-align: center;
             line-height: .33rem;
             margin-bottom: .08rem;
           }
           p {
+            color: #666;
             font-size: .14rem;
             line-height: .23rem;
-            color: #999;
           }
           .free-test {
             display: block;
@@ -405,7 +425,7 @@
           width: 3.27rem;
           height: 1.59rem;
           border-radius: .06rem;
-          background: url("../assets/home/pic-4.png") no-repeat;
+          background: url("../assets/h5home/mask.png") no-repeat;
           background-size: cover;
         }
         .eye-discuss-cr {
@@ -414,6 +434,7 @@
             line-height: .25rem;
             margin: .24rem 0 .08rem 0;
             text-align: center;
+            color: #333;
             span {
               display: block;
             }
@@ -422,6 +443,7 @@
             font-size: .14rem;
             line-height: .23rem;
             padding: 0 .16rem;
+            color: #666;
             span {
               display: inline-block;
               margin-top: .21rem;
