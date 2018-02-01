@@ -150,7 +150,10 @@
                 font-size: 14px;
                 line-height: 28px;
                 border-radius: 22px;
-                border: solid 1px #006d33; 
+                border: solid 1px #006d33;
+                a {
+                  display: block;
+                } 
               }
             }
             p {
@@ -164,8 +167,10 @@
                 display: inline-block;
                 margin-left: 8px;
               }
-              &:hover {
-                color: #006d33;
+              a {
+                &:hover {
+                  color: #006d33;
+                }
               }
             }
             &:nth-child(2) {

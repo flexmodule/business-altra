@@ -120,20 +120,27 @@
         }
       }
       .zan {
-        position: relative;
         width: 80px;
         height: 40px;
         margin: 96px auto 60px;
         background: #FF7373;
         border-radius: 28.5px;
         i {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 9px 9px 0 18px;
           width: 22px;
           height: 22px;
-          position: absolute;
-          left: 18px;
-          top: 8px;
           background: url("~@/assets/feedback/1.png") no-repeat;
           background-size: cover;
+        }
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          margin-top: 15px;
+          font-size: 14px;
+          line-height: 20px;
+          color: #fff;
         }
       }
       #share {
@@ -158,6 +165,148 @@
               width: 16px;
               height: 16px;
               margin: 0 4px;
+            }
+          }
+        }
+      }
+    }
+    .comment {
+      margin-top: 24px;
+      padding: 10px 157px 60px;
+      background: #fff;
+      h3 {
+        font-size: 24px;
+        line-height: 94px;
+        color: #006D33;
+      }
+      .comment-l {
+        width: 40px;
+        height: 40px;
+        background: red;
+        margin-right: 24px;
+        float: left;
+      }
+      .comment-r {
+        float: left;
+        #content {
+          width: 822px;
+          height: 90px;
+          font-size: 14px;
+          line-height: 20px;
+          padding: 8px;
+          color: #999;
+          border: 1px solid #e5e5e5;
+          &:focus {
+            outline: none;
+          }
+        }
+        .sub {
+          margin-top: 16px;
+          text-align: right;
+        }
+        button {
+          border: 0;
+          font-size: 12px;
+          line-height: 30px;
+          background: #006D33;
+          color: #fff;
+          padding: 0 27px;
+        }
+      }
+      .comment-list {
+        ul {
+          margin: 30px 0 20px 0;
+          li {
+            padding: 40px 0 43px 0;
+            border-top: 1px solid #E5E5E5;
+            .comment-list-l {
+              width: 32px;
+              height: 40px;
+              margin-right: 24px;
+              background: red;
+              float: left;
+            }
+            .comment-list-r {
+              width: 830px;
+              float: left;
+              .name-date {
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 16px;
+                color: #999;
+                .name-date-l {
+                  float: left;
+                }
+                .name-date-r {
+                  float: right;
+                }
+              }
+              .per-content {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 20px;
+              }
+              .eva-zan {
+                text-align: right;
+                i,span,b {
+                  display: inline-block;
+                  vertical-align: middle;
+                  margin: 0 8px;
+                }
+                span {
+                  font-size: 14px;
+                  line-height: 20px;
+                  color: #627E6F;
+                }
+                i {
+                  width: 13px;
+                  height: 13px;
+                  background: url("~@/assets/feedback/zan.png") no-repeat;
+                  background-size: cover;
+                }
+                b {
+                  width: 13px;
+                  height: 13px;
+                  background: url("~@/assets/feedback/reply.png") no-repeat;
+                  background-size: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+      .page {
+        text-align: center;
+        font-size: 0;
+        .total {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 13px;
+          line-height: 28px;
+          margin: 0 10px 0 0;
+          i {
+            font-style: normal;
+            margin: 0 2px;
+          }
+        }
+        #pagination {
+          display: inline-block;
+          vertical-align: middle;
+          height: 28px;
+          .common_pageBean_content {
+            margin: 0;
+            height: 28px;
+            li {
+              width: 28px;
+              height: 28px;
+              padding: 0;
+              margin: 0;
+              border: 1px solid #E5E5E5;
+              color: #333;
+              float: left;
+            }
+            li[data-actived=true] {
+              background: #006D33;
             }
           }
         }
@@ -282,9 +431,10 @@
         height: .4rem;
         margin: .76rem auto .21rem;
         border-radius: .285rem;
+        background: #CCCCCC;
         i {
-          width: .24rem;
-          height: .24rem;
+          width: .3rem;
+          height: .3rem;
           position: absolute;
           left: .17rem;
           top: .08rem;
@@ -314,8 +464,8 @@
             text-align: center;
             display: block;
             a {
-              width: .24rem;
-              height: .24rem;
+              width: .3rem;
+              height: .3rem;
               margin: 0 .08rem;
               display: inline-block;
               vertical-align: middle;
@@ -342,7 +492,143 @@
     }
     .comment {
       margin-top: .12rem;
-      height: .2rem;
+      padding: .08rem .16rem .4rem;
+      background: #fff;
+      h3 {
+        font-size: .16rem;
+        line-height: .54rem;
+        color: #006D33;
+      }
+      .comment-l {
+        width: .4rem;
+        height: .4rem;
+        background: red;
+        margin-right: .08rem;
+        float: left;
+      }
+      .comment-r {
+        float: left;
+        #content {
+          width: 2.95rem;
+          height: .9rem;
+          font-size: .14rem;
+          line-height: .2rem;
+          padding: .08rem;
+          color: #999;
+          border: .01rem solid #e5e5e5;
+          &:focus {
+            outline: none;
+          }
+        }
+        .sub {
+          margin-top: .16rem;
+          text-align: right;
+        }
+        button {
+          border: 0;
+          font-size: .12rem;
+          line-height: .3rem;
+          background: #006D33;
+          color: #fff;
+          padding: 0 .27rem;
+        }
+      }
+      .comment-list {
+        ul {
+          margin: .3rem 0 .405rem 0;
+          border-bottom: .01rem solid #E5E5E5;
+          li {
+            padding: .16rem 0 .23rem 0;
+            border-top: .01rem solid #E5E5E5;
+            .comment-list-l {
+              width: .4rem;
+              height: .4rem;
+              margin-right: .08rem;
+              background: red;
+              margin-bottom: .12rem;
+            }
+            .comment-list-r {
+              position: relative;
+              .name-date {
+                width: 2.95rem;
+                position: absolute;
+                top: -.52rem;
+                left: .48rem;
+                font-size: .14rem;
+                line-height: .4rem;
+                color: #999;
+                .name-date-l {
+                  float: left;
+                }
+                .name-date-r {
+                  float: right;
+                }
+              }
+              .per-content {
+                font-size: .14rem;
+                line-height: .24rem;
+                margin-bottom: .12rem;
+              }
+              .eva-zan {
+                text-align: right;
+                i,span,b {
+                  display: inline-block;
+                  vertical-align: middle;
+                  margin: 0 .08rem;
+                }
+                i {
+                  width: .13rem;
+                  height: .13rem;
+                  background: url("~@/assets/feedback/zan.png") no-repeat;
+                  background-size: cover;
+                }
+                b {
+                  width: .13rem;
+                  height: .13rem;
+                  background: url("~@/assets/feedback/reply.png") no-repeat;
+                  background-size: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+      .page {
+        text-align: center;
+        font-size: 0;
+        .total {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: .13rem;
+          line-height: .28rem;
+          margin: 0 .1rem 0 .27rem;
+          i {
+            font-style: normal;
+            margin: 0 2px;
+          }
+        }
+        #pagination {
+          display: inline-block;
+          vertical-align: middle;
+          height: .28rem;
+          .common_pageBean_content {
+            margin: 0;
+            height: .28rem;
+            li {
+              width: .28rem;
+              height: .28rem;
+              padding: 0;
+              margin: 0;
+              border: .01rem solid #E5E5E5;
+              color: #333;
+              float: left;
+            }
+            li[data-actived=true] {
+              background: #006D33;
+            }
+          }
+        }
+      }
     }
   }
 }

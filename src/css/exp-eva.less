@@ -25,16 +25,240 @@
     .main-t {
       border-bottom: 2px solid #338A5C;
       height: 40px;
-      a {
+      span {
         display: inline-block;
         font-size: 12px;
         line-height: 40px;
         padding: 0 19px;
         vertical-align: middle;
+        cursor: pointer;
       }
       .active {
         background: #338A5C;
         color: #fff;
+      }
+    }
+    .main-b-l {
+      ul {
+        margin: 0 0 20px 0;
+        li {
+          padding: 40px 0 24px 0;
+          border-top: 1px solid #E5E5E5;
+          &:nth-child(1) {
+            border: 0;
+          }
+          .eva-list-l {
+            width: 32px;
+            height: 40px;
+            margin-right: 24px;
+            background: red;
+            float: left;
+          }
+          .eva-list-r {
+            width: 1056px;
+            float: left;
+            .name-date {
+              font-size: 14px;
+              line-height: 20px;
+              margin-bottom: 16px;
+              color: #999;
+              .name-date-l {
+                float: left;
+              }
+              .name-date-r {
+                float: right;
+              }
+            }
+            .per-content {
+              font-size: 14px;
+              line-height: 24px;
+              margin-bottom: 20px;
+            }
+            .zan {
+              font-size: 14px;
+              line-height: 20px;
+              p {
+                float: left;
+                color: #999;
+              }
+              .lookdetail {
+                float: right;
+                color: #338A5C;
+              }
+              i,span,b {
+                display: inline-block;
+                vertical-align: middle;
+                font-style: normal;
+                font-weight: 100;
+                margin: 0 4px;
+              }
+            }
+          }
+        }
+      }
+      .page { 
+        text-align: center;
+        .total {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 13px;
+          line-height: 28px;
+          margin: 0 10px 0 0;
+          i {
+            font-style: normal;
+            margin: 0 2px;
+          }
+        }
+        #pagination {
+          display: inline-block;
+          vertical-align: middle;
+          height: 28px;
+          .common_pageBean_content {
+            margin: 0;
+            height: 28px;
+            li {
+              width: 28px;
+              height: 28px;
+              padding: 0;
+              margin: 0;
+              border: 1px solid #E5E5E5;
+              color: #333;
+              float: left;
+            }
+            li[data-actived=true] {
+              background: #006D33;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:750px) {
+  .exp-eva {
+    background: #ddece4;
+    padding: .12rem 0 0 0;
+    .title {
+      display: none;
+    } 
+    .main {
+      background: #fff;
+      padding: 0 0 .4rem 0;
+    }
+    .main-t {
+      font-size: 0;
+      height: .44rem;
+      span {
+        display: inline-block;
+        font-size: .14rem;
+        line-height: .44rem;
+        height: .44rem;
+        width: 50%;
+        vertical-align: middle;
+        cursor: pointer;
+        text-align: center;
+      }
+      .active {
+        border-bottom: .02rem solid #338A5C;
+        color: #338A5C;
+      }
+    }
+    .main-b-l {
+      padding: 0 .16rem;
+      ul {
+        padding-top: .15rem;
+        margin: 0 0 .405rem 0;
+        li {
+          padding: .2rem 0;
+          border-bottom: .01rem solid #E5E5E5;
+          .eva-list-l {
+            width: .4rem;
+            height: .4rem;
+            background: red;
+            margin-bottom: .12rem;
+          }
+          .eva-list-r {
+            position: relative;
+            .name-date {
+              width: 2.95rem;
+              position: absolute;
+              top: -.52rem;
+              left: .48rem;
+              font-size: .14rem;
+              line-height: .4rem;;
+              margin-bottom: .08rem;
+              color: #999;
+              .name-date-l {
+                float: left;
+              }
+              .name-date-r {
+                float: right;
+              }
+            }
+            .per-content {
+              font-size: .14rem;
+              line-height: .24rem;
+              margin-bottom: .08rem;
+            }
+            .zan {
+              font-size: .14rem;
+              line-height: .2rem;
+              p {
+                float: left;
+                color: #999;
+              }
+              .lookdetail {
+                float: right;
+                color: #338A5C;
+              }
+              i,span,b {
+                display: inline-block;
+                vertical-align: middle;
+                font-style: normal;
+                font-weight: 100;
+                margin: 0 .04rem;
+              }
+            }
+          }
+        }
+      }
+      .page { 
+        text-align: center;
+        height: .28rem;
+        font-size: 0;
+        .total {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: .13rem;
+          line-height: .28rem;
+          margin: 0 .1rem 0 0;
+          i {
+            font-style: normal;
+            margin: 0 .02rem;
+          }
+        }
+        #pagination {
+          display: inline-block;
+          vertical-align: middle;
+          height: .28rem;
+          .common_pageBean_content {
+            padding: 0;
+            margin: 0;
+            height: .28rem;
+            li {
+              width: .28rem;
+              height: .28rem;
+              padding: 0;
+              margin: 0;
+              border: .01rem solid #E5E5E5;
+              color: #333;
+              float: left;
+            }
+            li[data-actived=true] {
+              background: #006D33;
+            }
+          }
+        }
       }
     }
   }

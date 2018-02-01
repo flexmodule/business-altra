@@ -89,47 +89,33 @@
             font-weight: 700;
           }
         }
-        .file {
+        #uploader-image {
           padding: 24px 0 72px 24px;
           background: #f5f5f5;
-          p {
-            position: relative;
-          }
-          input {
-            display: none;
-          }
-          label {
-            position: absolute;
-            left: 0;
-            width: 72px;
-            font-size: 12px;
-            line-height: 28px;
-            height: 28px;
-            background: #f5f5f5;
-            text-align: center;
+          position: relative;
+          .select {
             border: 1px solid #006D33;
             border-radius: 4px;
+            color: #006D33;
           }
-          span {
-            margin-left: 80px;
-            font-size: 12px;
-            line-height: 17px;
-            vertical-align: middle;
-          }
-        }
-        .sub {
-          text-align: center;
-          margin-top: 60px;
-          font-size: 0;
-          button {
-            border: 0;
-            border-radius: 20px;
+          .upload {
+            position: absolute;
             font-size: 14px;
-            line-height: 20px;
-            color: #fff;
-            padding: 10px 43px;
+            line-height: 40px;
+            height: 40px;
             background: #006D33;
             opacity: .2;
+            border-radius: 20px;
+            color: #fff;
+            width: 240px;
+            bottom: -100px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            span {
+              display: inline-block;
+              vertical-align: middle;
+            }
           }
         }
       }
@@ -154,7 +140,7 @@
       }
     }
     .main2 {
-      padding: .3rem .16rem .4rem;
+      padding: .3rem .16rem 0;
       background: #fff;
       .apply-info {
         text-align: center;
@@ -208,42 +194,39 @@
             font-weight: 700;
           }
         }
-        .file {
-          padding: 24px 0 72px 24px;
-          background: #f5f5f5;
-          p {
-            position: relative;
-          }
-          input {
-            display: none;
-          }
-          label {
-            position: absolute;
-            left: 0;
-            width: 72px;
-            font-size: 12px;
-            line-height: 28px;
-            height: 28px;
-            text-align: center;
-            border: 1px solid #006D33;
-            border-radius: 4px;
-          }
-          span {
-            display: none;
-          }
-        }
-        .sub {
-          text-align: center;
-          margin-top: .4rem;
+        #uploader-image {
           font-size: 0;
-          button {
+          .select {
+            display: block;
             border: 0;
-            border-radius: .2rem;
+            background: #F5F5F5;
+            padding: .42rem .35rem .8rem .37rem;
+            span {
+              display: block;
+              background: url("~@/assets/free-exp/Fill1.png") no-repeat;
+              background-size: cover;
+              width: .54rem;
+              height: .42rem;
+            }
+          }
+          .tip {
+            display: none;
+          }
+          .file-list {
+            display: none;
+          }
+          .upload {
+            display: block;
             font-size: .14rem;
-            line-height: .2rem;
-            color: #fff;
-            padding: .1rem 1.22rem;
+            line-height: .4rem;
+            height: .4rem;
             background: #006D33;
+            opacity: .2;
+            border-radius: .2rem;
+            color: #fff;
+            width: 3rem;
+            margin: .4rem auto 0;
+            float: none;
             span {
               display: none;
             }
