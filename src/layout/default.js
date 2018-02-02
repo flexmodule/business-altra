@@ -32,6 +32,10 @@ if (window.location.pathname === '/home') {
   $a = 1
 } else if (window.location.pathname === '/detail') {
   $a = 4
+} else if (window.location.pathname === '/eyecare-study') {
+  $a = 2
+} else if (window.location.pathname === '/eyecare-discuss') {
+  $a = 3
 }
 oA.eq($a).addClass('active')
 oA.hover(function () {

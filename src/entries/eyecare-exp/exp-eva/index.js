@@ -21,54 +21,47 @@ const clickPageHandler = function (newPage, oldPage) {
     cur: newPage
   })
   let oPage = newPage.toString()
-  API.getEvaData({page: oPage, size: '2'}, {}).done(function (e) {
-    if (e.success) {
-      console.log(e.data)
+  API.getEvaData({page: oPage, size: '2'}, {}).done(function (res) {
+    if (res.success) {
+      console.log(res.data)
       $('.evalist').html('')
-      let $oUl = $('<ul></ul>')
-      for (let i = 0; i < e.data.length; i++) {
-        let $oLi = `<li class="clearfix">
-                      <div class="eva-list-l"></div>
-                      <div class="eva-list-r">
-                        <p class="name-date clearfix"><span class="name-date-l">${e.data[i].id}</span><span class="name-date-r">${e.data[i].pubDate}</span></p>
-                        <div class="per-content">${e.data[i].body}</div>
-                        <div class="zan clearfix"><p><span>点赞</span><i>${e.data[i].numOfLiked}</i><span>评论</span><b>${e.data[i].commentNum}</b></p><a href="/eyecare-exp/feedback?id=${e.data[i].id}" class="lookdetail">查看详情</a></div>
-                      </div>
-                    </li>`
-        $oUl.append($oLi)
-      }
-      $('.evalist').html($oUl)
+      const oLi = res.data.map(item => `<li class="clearfix">
+      <div class="eva-list-l"></div>
+      <div class="eva-list-r">
+        <p class="name-date clearfix"><span class="name-date-l">${item.id}</span><span class="name-date-r">${item.pubDate}</span></p>
+        <div class="per-content">${item.body}</div>
+       <div class="zan clearfix"><p><span>点赞</span><i>${item.numOfLiked}</i><span>评论</span><b>${item.commentNum}</b></p><a href="/eyecare-exp/feedback?id=${item.id}" class="lookdetail">查看详情</a></div>
+    </div>
+</li>`).join('')
+      $('.evalist').html(`<ul>${oLi}</ul>`)
     }
   }).fail(function (error) {
     console.log(error)
   })
 }
-API.getEvaData({page: '1', size: '2'}, {}).done(function (e) {
-  if (e.success) {
-    $('.main-b-l').find('.page').find('.total i').html(e.total)
+API.getEvaData({page: '1', size: '2'}, {}).done(function (res) {
+  if (res.success) {
+    $('.main-b-l').find('.page').find('.total i').html(res.total)
     new Pagination({
       ele: '#pagination',
       cur: 1,
       limit: 2,
-      total: e.total,
+      total: res.total,
       clickPageHandler
     })
-    console.log(e.data)
+    console.log(res.data)
     $('.evalist').html('')
-    let $oUl = $('<ul></ul>')
-    for (let i = 0; i < e.data.length; i++) {
-      let $oLi = `<li class="clearfix">
-                    <div class="eva-list-l"></div>
-                    <div class="eva-list-r">
-                      <p class="name-date clearfix"><span class="name-date-l">${e.data[i].id}</span><span class="name-date-r">${e.data[i].pubDate}</span></p>
-                      <div class="per-content">${e.data[i].body}</div>
-                      <div class="zan clearfix"><p><span>点赞</span><i>${e.data[i].numOfLiked}</i><span>评论</span><b>${e.data[i].commentNum}</b></p><a href="/eyecare-exp/feedback?id=${e.data[i].id}" class="lookdetail">查看详情</a></div>
-                    </div>
-                  </li>`
-      $oUl.append($oLi)
-    }
-    $('.evalist').html($oUl)
+    const oLi = res.data.map(item => `<li class="clearfix">
+                           <div class="eva-list-l"></div>
+                           <div class="eva-list-r">
+                             <p class="name-date clearfix"><span class="name-date-l">${item.id}</span><span class="name-date-r">${item.pubDate}</span></p>
+                             <div class="per-content">${item.body}</div>
+                            <div class="zan clearfix"><p><span>点赞</span><i>${item.numOfLiked}</i><span>评论</span><b>${item.commentNum}</b></p><a href="/eyecare-exp/feedback?id=${item.id}" class="lookdetail">查看详情</a></div>
+                         </div>
+                     </li>`).join('')
+    $('.evalist').html(`<ul>${oLi}</ul>`)
   }
 }).fail(function (error) {
   console.log(error)
 })
+

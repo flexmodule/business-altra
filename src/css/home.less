@@ -75,7 +75,6 @@
           text-align: center;
           font-size: 60px;
           line-height: 95px;
-          font-family: SF;
           color: #d7e8de;  
           position: relative;
           .txtback {
@@ -125,9 +124,7 @@
             border-radius: 8px;
             transition: all .5s;
             &:hover {
-              transform: translateZ(10px);
-              perspective: 3000;
-              box-shadow: 15px 15px 10px rgba(0,0,0,.3);
+              box-shadow: 0 10px 16px 0 rgba(0,0,0,.1);
               transition: all .5s;
             }
             .stu-li-b {
@@ -160,12 +157,12 @@
               font-size: 16px;
               line-height: 42px;
               i {
-                font-size: 6px;
-                line-height: 6px;
-                height: 6px;
-                font-style: normal;
+                width: 8.5px;
+                height: 8.5px;
                 display: inline-block;
                 margin-left: 8px;
+                background: url("~@/assets/home/jiantou.png") no-repeat;
+                background-size: 8.5px 8.5px; 
               }
               a {
                 &:hover {
@@ -359,6 +356,18 @@
             background-color: #ffffff;
             box-shadow: 0 .04rem .16rem 0 rgba(0, 0, 0, 0.08);
             margin-top: .24rem;
+            transition: all .5s;
+            &:nth-child(1) {
+              p {
+                &:nth-child(2) {
+                  color: #006d33;
+                }
+              }
+            }
+            &:hover {
+              box-shadow: 10px 10px 5px rgba(0,0,0,.3);
+              transition: all .5s;
+            }
             .stu-li-b {
               padding: 0 .24rem .22rem .24rem;
               background: #fff;
@@ -386,16 +395,14 @@
             p {
               font-size: .16rem;
               line-height: .42rem;
-              &:nth-child(2) {
-                color: #006d33;
-              }
+             
               i {
-                font-size: .06rem;
-                line-height: .06rem;
-                height: .06rem;
-                font-style: normal;
+                width: .085rem;
+                height: .085rem;
                 display: inline-block;
                 margin-left: .08rem;
+                background: url("~@/assets/home/jiantou.png") no-repeat;
+                background-size: .085rem .085rem; 
               }
             }
             .pic-same {

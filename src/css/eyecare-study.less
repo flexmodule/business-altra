@@ -1,0 +1,116 @@
+@media (min-width:750px){
+  .eye-study {
+    padding: 59px 317px;
+    width: 1366px;
+    margin: 0 auto;
+    background: #DDECE4;
+    ul {
+      li {
+        background: #fff;
+        padding: 20px 24px 20px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        transition: all .3s;
+        &:hover {
+          box-shadow: 10px 10px 16px 0 rgba(0,0,0,.1);
+          transition: all .5s;
+        }
+        &:nth-child(1) {
+          .leftimg {
+            background: url("~@/assets/eyestudy/rectangle.png") no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-child(2) {
+          .leftimg {
+            background: url("~@/assets/eyestudy/mask.png") no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-child(3) {
+          .leftimg {
+            background: url("~@/assets/eyestudy/rec.png") no-repeat;
+            background-size: cover;
+          }
+        }
+        .leftimg {
+          width: 200px;
+          height: 150px;
+          float: left;
+          margin-right: 24px;
+        } 
+        .rightp {
+          h3 {
+            display: none;
+          }
+          float: left;
+          font-size: 16px;
+          line-height: 38px;
+          color: #333;
+          p{
+            margin-bottom: 8px;
+            &:nth-child(1) {
+              margin-top: 15px;
+            }
+            a {
+              &:hover {
+                color: #006D33;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:750px){
+  .eye-study {
+    ul {
+      li {
+        margin-bottom: 20px;
+        &:nth-child(1) {
+          .leftimg {
+            background: url("~@/assets/eyestudy/h5rectangle.png") no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-child(2) {
+          .leftimg {
+            background: url("~@/assets/eyestudy/h5mask.png") no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-child(3) {
+          .leftimg {
+            background: url("~@/assets/eyestudy/h5rec.png") no-repeat;
+            background-size: cover;
+          }
+        }
+        .leftimg {
+          width: 3.75rem;
+          height: 2.1rem;
+        } 
+        .rightp {
+          padding: .16rem;
+          h3 {
+            font-size: .24rem;
+            line-height: .33rem;
+            margin-bottom: .16rem;
+          }
+          color: #333;
+          p{
+            font-size: .16rem;
+            line-height: .26rem;
+            margin-bottom: .12rem;
+            a {
+              &:hover {
+                color: #006D33;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

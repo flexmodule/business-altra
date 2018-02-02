@@ -106,6 +106,7 @@
       .footer-b {
           font-size: 14px;
           line-height: 60px;
+          font-weight: 300;
           color: #bfbfbf;
           text-align: center;
           box-shadow: 0 -1px 0 0 #e5e5e5;
@@ -116,10 +117,30 @@
 @media (max-width: 750px) {
 header {
     padding: 0 .16rem;
+    position: relative;
+    #nav {
+        position: absolute;
+        padding-top: .1rem;
+        border-top: .01rem solid #ebebeb;
+        top: -999rem;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background: #fff;
+        width: 100%;
+        text-align: center;
+        li {
+          height: .38rem;
+            .active {
+                color: #006d33;
+            }
+            font-size: .14rem;
+            line-height: .36rem;
+        }
+      }
     .header {
         padding: .11rem 0;
         font-size: 0;
-        position: relative;
         .logoimg {
             display: none;
         }
@@ -127,24 +148,6 @@ header {
             width: .39rem;
             height: .28rem;
             float: left;
-        }
-        ul {
-          position: absolute;
-          top: -999rem;
-          z-index: 3;
-          background: #c0c0c0;
-          width: 100%;
-          border-radius: .1rem;
-          text-align: center;
-          li {
-            height: .38rem;
-              .active {
-                  border-bottom: .02rem solid #006d33;
-                  color: #006d33;
-              }
-              font-size: .14rem;
-              line-height: .36rem;
-          }
         }
         .icon {
             float: right;
@@ -218,6 +221,7 @@ header {
         }
         .footer-b {
           padding: 0 0 .16rem 0;
+          font-weight: 300;
           font-size: .14rem;
           line-height: .52rem;
           color: #939393;

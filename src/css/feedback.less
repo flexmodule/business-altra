@@ -137,7 +137,7 @@
         span {
           display: inline-block;
           vertical-align: middle;
-          margin-top: 15px;
+          margin-top: 11px;
           font-size: 14px;
           line-height: 20px;
           color: #fff;
@@ -174,125 +174,85 @@
       margin-top: 24px;
       padding: 10px 157px 60px;
       background: #fff;
-      h3 {
-        font-size: 24px;
-        line-height: 94px;
-        color: #006D33;
-      }
-      .comment-l {
-        width: 40px;
-        height: 40px;
-        background: red;
-        margin-right: 24px;
-        float: left;
-      }
-      .comment-r {
-        float: left;
-        #content {
-          width: 822px;
-          height: 90px;
-          font-size: 14px;
-          line-height: 20px;
-          padding: 8px;
-          color: #999;
-          border: 1px solid #e5e5e5;
-          &:focus {
-            outline: none;
+      #comment-list {
+        .comment-box {
+          padding: 0;
+          padding-top: 30px;
+          margin: 0;
+        }
+        .input-box {
+          label {
+            font-size: 24px;
+            line-height: 34px;
+            color: #006D33;
+            font-weight: 100;
           }
-        }
-        .sub {
-          margin-top: 16px;
-          text-align: right;
-        }
-        button {
-          border: 0;
-          font-size: 12px;
-          line-height: 30px;
-          background: #006D33;
-          color: #fff;
-          padding: 0 27px;
-        }
-      }
-      .comment-list {
-        ul {
-          margin: 30px 0 20px 0;
-          li {
-            padding: 40px 0 43px 0;
-            border-top: 1px solid #E5E5E5;
-            .comment-list-l {
-              width: 32px;
-              height: 40px;
-              margin-right: 24px;
-              background: red;
-              float: left;
-            }
-            .comment-list-r {
-              width: 830px;
-              float: left;
-              .name-date {
-                font-size: 14px;
-                line-height: 20px;
-                margin-bottom: 16px;
+          .wrap {
+            textarea {
+              width: 822px;
+              height: 90px;
+              resize: none;
+              &:focus {
+                color: #333;
+              }
+              &:blur {
                 color: #999;
-                .name-date-l {
-                  float: left;
-                }
-                .name-date-r {
-                  float: right;
-                }
               }
-              .per-content {
-                font-size: 14px;
-                line-height: 24px;
-                margin-bottom: 20px;
-              }
-              .eva-zan {
-                text-align: right;
-                i,span,b {
-                  display: inline-block;
-                  vertical-align: middle;
-                  margin: 0 8px;
-                }
-                span {
-                  font-size: 14px;
-                  line-height: 20px;
-                  color: #627E6F;
-                }
-                i {
-                  width: 13px;
-                  height: 13px;
-                  background: url("~@/assets/feedback/zan.png") no-repeat;
-                  background-size: cover;
-                }
-                b {
-                  width: 13px;
-                  height: 13px;
-                  background: url("~@/assets/feedback/reply.png") no-repeat;
-                  background-size: cover;
-                }
+            }
+            .action {
+              margin: 16px 0 30px 0;
+              .btn {
+                font-size: 12px;
+                line-height: 17px;
+                width: 78px;
+                height: 30px;
+                background: #006D33;
               }
             }
           }
         }
-      }
-      .page {
-        text-align: center;
-        font-size: 0;
-        .total {
-          display: inline-block;
-          vertical-align: middle;
-          font-size: 13px;
-          line-height: 28px;
-          margin: 0 10px 0 0;
-          i {
-            font-style: normal;
-            margin: 0 2px;
+        .list {
+          .list-item {
+            padding: 40px 0 43px 64px;
+            .base {
+              .avatar {
+                top: 40px;
+              }
+            }
+            .content {
+              color: #000;
+            }
+            .control {
+              a {
+                color: #627E6F;
+                margin-left: 16px;
+              }
+            }
           }
         }
-        #pagination {
-          display: inline-block;
-          vertical-align: middle;
+        .page {
+          text-align: center;
+          font-size: 0;
+          .total {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 13px;
+            line-height: 28px;
+            margin: 0 10px 0 0;
+            i {
+              font-style: normal;
+              margin: 0 2px;
+            }
+          }
+        }
+        .common_pageBean {
+          margin-top: 20px;
+          text-align: center;
           height: 28px;
+          ul {
+            display: inline-block;
+            border-right: 1px solid #E5E5E5;
+          }
           .common_pageBean_content {
             margin: 0;
             height: 28px;
@@ -301,12 +261,15 @@
               height: 28px;
               padding: 0;
               margin: 0;
+              border-radius: 0;
               border: 1px solid #E5E5E5;
+              border-right: 0;
               color: #333;
               float: left;
             }
             li[data-actived=true] {
               background: #006D33;
+              color: #fff;
             }
           }
         }
@@ -433,8 +396,8 @@
         border-radius: .285rem;
         background: #CCCCCC;
         i {
-          width: .3rem;
-          height: .3rem;
+          width: .24rem;
+          height: .24rem;
           position: absolute;
           left: .17rem;
           top: .08rem;
@@ -470,6 +433,18 @@
               display: inline-block;
               vertical-align: middle;
               float: none;
+              &:nth-child(1) {
+                background: url("~@/assets/h5eyecare/wechat.png") no-repeat;
+                background-size: cover;
+              }
+              &:nth-child(2) {
+                background: url("~@/assets/h5eyecare/xinlang.png") no-repeat;
+                background-size: cover;
+              }
+              &:nth-child(3) {
+                background: url("~@/assets/h5eyecare/q-q.png") no-repeat;
+                background-size: cover;
+              }
             }
             #w_xin {
               width: 2.15rem;
@@ -492,139 +467,114 @@
     }
     .comment {
       margin-top: .12rem;
-      padding: .08rem .16rem .4rem;
+      padding: 0 .16rem .4rem;
       background: #fff;
-      h3 {
-        font-size: .16rem;
-        line-height: .54rem;
-        color: #006D33;
-      }
-      .comment-l {
-        width: .4rem;
-        height: .4rem;
-        background: red;
-        margin-right: .08rem;
-        float: left;
-      }
-      .comment-r {
-        float: left;
-        #content {
-          width: 2.95rem;
-          height: .9rem;
-          font-size: .14rem;
-          line-height: .2rem;
-          padding: .08rem;
-          color: #999;
-          border: .01rem solid #e5e5e5;
-          &:focus {
-            outline: none;
+      #comment-list {
+        .comment-box {
+          padding: 0;
+          padding-top: .24rem;
+          margin: 0;
+        }
+        .input-box {
+          label {
+            font-size: .16rem;
+            line-height: .22rem;
+            color: #006D33;
+            font-weight: 100;
           }
-        }
-        .sub {
-          margin-top: .16rem;
-          text-align: right;
-        }
-        button {
-          border: 0;
-          font-size: .12rem;
-          line-height: .3rem;
-          background: #006D33;
-          color: #fff;
-          padding: 0 .27rem;
-        }
-      }
-      .comment-list {
-        ul {
-          margin: .3rem 0 .405rem 0;
-          border-bottom: .01rem solid #E5E5E5;
-          li {
-            padding: .16rem 0 .23rem 0;
-            border-top: .01rem solid #E5E5E5;
-            .comment-list-l {
-              width: .4rem;
-              height: .4rem;
-              margin-right: .08rem;
-              background: red;
-              margin-bottom: .12rem;
+          .wrap {
+            .dxy-logo {
+              display: block;
             }
-            .comment-list-r {
-              position: relative;
-              .name-date {
-                width: 2.95rem;
-                position: absolute;
-                top: -.52rem;
-                left: .48rem;
-                font-size: .14rem;
-                line-height: .4rem;
+            textarea {
+              width: 2.95rem;
+              height: .9rem;
+              resize: none;
+              margin-left: .48rem;
+              &:focus {
+                color: #333;
+              }
+              &:blur {
                 color: #999;
-                .name-date-l {
-                  float: left;
-                }
-                .name-date-r {
-                  float: right;
-                }
               }
-              .per-content {
-                font-size: .14rem;
-                line-height: .24rem;
-                margin-bottom: .12rem;
-              }
-              .eva-zan {
-                text-align: right;
-                i,span,b {
-                  display: inline-block;
-                  vertical-align: middle;
-                  margin: 0 .08rem;
-                }
-                i {
-                  width: .13rem;
-                  height: .13rem;
-                  background: url("~@/assets/feedback/zan.png") no-repeat;
-                  background-size: cover;
-                }
-                b {
-                  width: .13rem;
-                  height: .13rem;
-                  background: url("~@/assets/feedback/reply.png") no-repeat;
-                  background-size: cover;
-                }
+            }
+            .action {
+              margin: .16rem 0 .24rem 0;
+              .btn {
+                font-size: .12rem;
+                line-height: .17rem;
+                width: .78rem;
+                height: .3rem;
+                background: #006D33;
               }
             }
           }
         }
-      }
-      .page {
-        text-align: center;
-        font-size: 0;
-        .total {
-          display: inline-block;
-          vertical-align: middle;
-          font-size: .13rem;
-          line-height: .28rem;
-          margin: 0 .1rem 0 .27rem;
-          i {
-            font-style: normal;
-            margin: 0 2px;
+        .list {
+          border-bottom: .01rem solid #E5E5E5;
+          .list-item {
+            border-top: .01rem solid #E5E5E5;
+            padding: .16rem 0 .23rem 0;
+            .base {
+              .avatar {
+                width: .4rem;
+                height: .4rem;
+              }
+              .datetime {
+                margin-top: .11rem;
+              }
+            }
+            .content {
+              color: #000;
+            }
+            .control {
+              a {
+                color: #627E6F;
+                margin-left: .16rem;
+              }
+            }
           }
         }
-        #pagination {
-          display: inline-block;
-          vertical-align: middle;
+        .page {
+          text-align: center;
+          font-size: 0;
+          .total {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: .13rem;
+            line-height: .28rem;
+            margin: 0 .1rem 0 0;
+            i {
+              font-style: normal;
+              margin: 0 .02rem;
+            }
+          }
+        }
+        .common_pageBean {
+          margin-top: .405rem;
+          text-align: center;
           height: .28rem;
+          ul {
+            display: inline-block;
+            border-right: .01rem solid #E5E5E5;
+          }
           .common_pageBean_content {
             margin: 0;
             height: .28rem;
             li {
               width: .28rem;
               height: .28rem;
+              border-radius: 0;
               padding: 0;
               margin: 0;
               border: .01rem solid #E5E5E5;
+              border-right: 0;
               color: #333;
               float: left;
             }
             li[data-actived=true] {
               background: #006D33;
+              color: #fff;
             }
           }
         }

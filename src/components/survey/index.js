@@ -2,7 +2,7 @@ import * as validateRegExp from './validateRegExp'
 import Cascading from '@dxy/cascading-list-v3'
 import { renderResult } from './tpl'
 import './index.less'
-import Uploader from '@dxy/pure-components/dist/uploader'
+import API from '@/utils/api'
 const isMobile =
   window.navigator &&
   window.navigator.userAgent &&
@@ -31,7 +31,7 @@ const cascadingConfig = {
 }
 
 export default class Survey {
-  constructor ({ get, submit, username, container, needLogin = false }) {
+  constructor ({ get, submit, username, container, needLogin = false, onfinished }) {
     this.getFormItem = get
     this.submitForm = submit
     this.initElement()
@@ -39,6 +39,7 @@ export default class Survey {
     this.cascadingData = {}
     this.username = username
     this.needLogin = needLogin
+    this.onfinished = onfinished
     this.init()
     if (container) {
       try {
@@ -441,31 +442,22 @@ export default class Survey {
     if (page_name === 'user_complete' && page_type === 'status_page') {
       const { desc, title } = page_info
       let oHtml = `<div class="main2">
-      <div class="apply-info">
-        <div class="apply-logo"></div>
-        <div class="message">您的申请已经完成</div>
-        <div class="handinfo"></div>
-        <h3>继续参与深度体验</h3>
-        <p>感谢您参加康澈产品免费体验活动，活动产品全程免费提供。</p>
-        <p>你可以继续参与深度体验，但需在活动申请前，及试用结束后分别提交医院开具的明视持久度体检单。</p>
-      </div>
-      <div class="deep-apply">
-        <h3>上传图片</h3>
-        <div class="reminder"><p><span>温馨提示：</span>体检后拍照上传医院开具的体检单，图片大小 10M 以内，格式 jpg</p></div>
-        <div id="uploader-image"></div>
-      </div>
-    </div>`
+                    <div class="apply-info">
+                      <div class="apply-logo"></div>
+                      <div class="message">您的申请已经完成</div>
+                      <div class="handinfo"></div>
+                      <h3>继续参与深度体验</h3>
+                      <p>感谢您参加康澈产品免费体验活动，活动产品全程免费提供。</p>
+                      <p>你可以继续参与深度体验，但需在活动申请前，及试用结束后分别提交医院开具的明视持久度体检单。</p>
+                    </div>
+                    <div class="deep-apply">
+                      <h3>上传图片</h3>
+                      <div class="reminder"><p><span>温馨提示：</span>体检后拍照上传医院开具的体检单，图片大小 10M 以内，格式 jpg</p></div>
+                      <div id="uploader-image"></div>
+                    </div>
+                  </div>`
       this.$el.parentNode.parentNode.innerHTML = oHtml
-      new Uploader({
-        container: '#uploader-image',
-        accept: 'image/*',
-        multiple: true
-      })
-      let oTxt = `上传图片<span>，参与深度体验</span>`
-      document.getElementById('uploader-image').getElementsByClassName('upload')[0].innerHTML = oTxt
-      if (isMobile) {
-        document.getElementById('uploader-image').getElementsByClassName('select')[0].innerHTML = `<span></span>`
-      }
+      this.onfinished && this.onfinished()
     } else {
       window.location.reload()
     }
