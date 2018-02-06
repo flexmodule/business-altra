@@ -26,11 +26,11 @@ if (isMobile) {
 let oA = $('#nav').find('li a')
 let $bstop = true
 let $a
-if (window.location.pathname === '/home') {
+if (window.location.pathname === '/') {
   $a = 0
-} else if (window.location.pathname === '/eyecare-exp/index' || window.location.pathname === '/eyecare-exp/free-exp' || window.location.pathname === '/eyecare-exp/exp-eva' || window.location.pathname === '/eyecare-exp/feedback') {
+} else if (window.location.pathname === '/eyecare-exp/index' || window.location.pathname === '/eyecare-exp/free-exp' || window.location.pathname === '/eyecare-exp/submitback' || window.location.pathname === '/eyecare-exp/exp-eva' || window.location.pathname === '/eyecare-exp/feedback') {
   $a = 1
-} else if (window.location.pathname === '/detail') {
+} else if (window.location.pathname === '/about') {
   $a = 4
 } else if (window.location.pathname === '/eyecare-study') {
   $a = 2

@@ -1,5 +1,5 @@
 const { protocol, host } = window.location
-const root = `${protocol}//${host}/business-altra/`
+const root = `${protocol}//${host}/altra/`
 
 const mockRoot = 'http://f2e.dxy.net/mock-api/client/'
 

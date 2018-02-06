@@ -2,7 +2,6 @@ import * as validateRegExp from './validateRegExp'
 import Cascading from '@dxy/cascading-list-v3'
 import { renderResult } from './tpl'
 import './index.less'
-import API from '@/utils/api'
 const isMobile =
   window.navigator &&
   window.navigator.userAgent &&
@@ -66,12 +65,13 @@ export default class Survey {
       return
     }
     this.getFormItem().then(rs => {
-      console.log(rs.form_item)// ------------------------------------------------------------------------------
+      console.log(rs)// ------------------------------------------------------------------------------
       if (!rs.form_item) {
         this.$form.parentNode.innerHTML = renderResult(rs.message)
         return
       }
       if (rs.form_item.page_name === 'user_complete') {
+        console.log(1111)
         this.$form.parentNode.innerHTML = renderResult('您已经完成填写，谢谢您的参与。')
       } else {
         this.build(rs.form_item)
