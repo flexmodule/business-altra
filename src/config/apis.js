@@ -17,7 +17,7 @@ const apiMap = {
   // 文章点赞
   likeArticle: ['post', 'likeArticle', '59c3962e629d0c621de80f79'],
   // 评论顶踩
-  evaTop: ['post', 'evaTop', '59c397c5c4959e6217974d6e'],
+  diggAndBury: ['post', 'diggAndBury', '59c397c5c4959e6217974d6e'],
   // 获取问卷数据接口
   getFormItem: ['get', 'getFormItem', '5a7176c9d0c5ad66a020651a'],
   // 提交表单接口
@@ -27,9 +27,9 @@ const apiMap = {
   // 文件列表
   fileList: ['get', 'fileList', '5a72ca6a6559a566b05267b9'],
   // 文件保存
-  fileSave: ['post', 'fileSave', '5a72c7c556479566b7b58227'],
+  saveFile: ['post', 'saveFile', '5a72c7c556479566b7b58227'],
   // 文件删除
-  fileRemove: ['post', 'fileRemove', '5a72c95156479566b7b5822c']
+  deleteFile: ['post', 'deleteFile', '5a72c95156479566b7b5822c']
 }
 
 const apis = {}

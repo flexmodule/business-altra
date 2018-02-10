@@ -4,22 +4,30 @@ import DxyShare from '@dxy/pure-components/dist/dxyShare'
 new DxyShare({
   container: '#share'
 })
-
+let id = window.location.href.split('?')[1].split('=')[1]
 import Comment from '@dxy/pure-components/dist/comment'
 new Comment({
-  articleId: 123123,
+  articleId: id,
   container: '#comment-list',
   getCommentList: API.getCommentList,
   postComment: API.postComment,
   isLogged: !!window.username,
-  bury: API.evaTop
+  bury: API.diggAndBury
 })
 console.log(API)
 import '@/css/feedback.less'
 
-// API.getCommentList({id: '123123', page: '1', limit: '2'}, {}).done(function (res) {
-//   console.log(res)
-// }).fail(function (error) {
-//   console.log(error)
-// })
+$('.zan').on('click', function () {
+  let self = this
+  API.likeArticle({id: id}).done(function (res) {
+    if (res.success) {
+      let zanNum = Number($(self).find('span').html())
+      zanNum += 1
+      $(self).find('span').html(zanNum)
+    }
+    console.log(res)
+  }).fail(function (error) {
+    console.log(error)
+  })
+})
 

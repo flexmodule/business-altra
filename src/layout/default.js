@@ -26,15 +26,15 @@ if (isMobile) {
 let oA = $('#nav').find('li a')
 let $bstop = true
 let $a
-if (window.location.pathname === '/') {
+if (window.location.pathname === '/altra') {
   $a = 0
-} else if (window.location.pathname === '/eyecare-exp/index' || window.location.pathname === '/eyecare-exp/free-exp' || window.location.pathname === '/eyecare-exp/submitback' || window.location.pathname === '/eyecare-exp/exp-eva' || window.location.pathname === '/eyecare-exp/feedback') {
+} else if (window.location.pathname === '/altra/eyecare-exp/index' || window.location.pathname === '/altra/eyecare-exp/free-exp' || window.location.pathname === '/altra/eyecare-exp/submitback' || window.location.pathname === '/altra/eyecare-exp/exp-eva' || window.location.pathname === '/altra/eyecare-exp/feedback') {
   $a = 1
-} else if (window.location.pathname === '/about') {
+} else if (window.location.pathname === '/altra/about') {
   $a = 4
-} else if (window.location.pathname === '/eyecare-study') {
+} else if (window.location.pathname === '/altra/eyecare-study') {
   $a = 2
-} else if (window.location.pathname === '/eyecare-discuss') {
+} else if (window.location.pathname === '/altra/eyecare-discuss' || window.location.pathname === '/altra/article') {
   $a = 3
 }
 oA.eq($a).addClass('active')

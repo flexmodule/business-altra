@@ -30,7 +30,7 @@ const cascadingConfig = {
 }
 
 export default class Survey {
-  constructor ({ get, submit, username, container, needLogin = false, onfinished }) {
+  constructor ({ get, submit, username, container, needLogin = false, buildDemo }) {
     this.getFormItem = get
     this.submitForm = submit
     this.initElement()
@@ -38,7 +38,7 @@ export default class Survey {
     this.cascadingData = {}
     this.username = username
     this.needLogin = needLogin
-    this.onfinished = onfinished
+    this.buildDemo = buildDemo
     this.init()
     if (container) {
       try {
@@ -67,11 +67,10 @@ export default class Survey {
     this.getFormItem().then(rs => {
       console.log(rs)// ------------------------------------------------------------------------------
       if (!rs.form_item) {
-        this.$form.parentNode.innerHTML = renderResult(rs.message)
+        this.buildDemo(this)
         return
       }
       if (rs.form_item.page_name === 'user_complete') {
-        console.log(1111)
         this.$form.parentNode.innerHTML = renderResult('您已经完成填写，谢谢您的参与。')
       } else {
         this.build(rs.form_item)
@@ -107,7 +106,7 @@ export default class Survey {
     itemsEle.className = 'items'
     items.forEach((item, index) => {
       console.log(index)
-      if (index <= 16) {
+      if (index <= 6) {
         itemsEl.appendChild(this.renderItem(item))
       } else {
         itemsEle.appendChild(this.renderItem(item))
@@ -425,6 +424,7 @@ export default class Survey {
       sid
     })
       .then(rs => {
+        console.log(rs)
         if (rs.success) {
           this.buildResultPage(rs)
         } else {
@@ -441,23 +441,7 @@ export default class Survey {
     const { page_info, page_name, page_type } = post_result
     if (page_name === 'user_complete' && page_type === 'status_page') {
       const { desc, title } = page_info
-      let oHtml = `<div class="main2">
-                    <div class="apply-info">
-                      <div class="apply-logo"></div>
-                      <div class="message">您的申请已经完成</div>
-                      <div class="handinfo"></div>
-                      <h3>继续参与深度体验</h3>
-                      <p>感谢您参加康澈产品免费体验活动，活动产品全程免费提供。</p>
-                      <p>你可以继续参与深度体验，但需在活动申请前，及试用结束后分别提交医院开具的明视持久度体检单。</p>
-                    </div>
-                    <div class="deep-apply">
-                      <h3>上传图片</h3>
-                      <div class="reminder"><p><span>温馨提示：</span>体检后拍照上传医院开具的体检单，图片大小 10M 以内，格式 jpg</p></div>
-                      <div id="uploader-image"></div>
-                    </div>
-                  </div>`
-      this.$el.parentNode.parentNode.innerHTML = oHtml
-      this.onfinished && this.onfinished()
+      this.buildDemo(this)
     } else {
       window.location.reload()
     }
@@ -472,10 +456,3 @@ export default class Survey {
   }
 }
 
-{ /* <div class="file">
-  <p><input type="file" id="file"><label for="file">选择文件</label></p>
-  <span>选择文件后点击右侧上传按钮进行上传，完成后页面出现✔︎提示，如需删除可按✘</span>
-</div>
-<div class="sub">
-    <button>上传图片<span>，参与深度体验</span></button>
-</div> */ }

@@ -1,7 +1,5 @@
 @media (min-width: 750px) {
   .eyecare-exp {
-    width: 1366px;
-    margin :0 auto;
     .margin {
       width: 1200px;
       margin: 0 auto;
@@ -11,13 +9,17 @@
     }
     .banner {
       background:  #ddece4;
-      padding: 72px 0 62px 0;
-      position: relative;
+      .margin {
+        width: 1366px;
+        margin: 0 auto;
+        padding: 72px 0 62px 0;
+        position: relative;
+      }
       .banner-l {
         float: left;
         width: 492px;
         height: 466px;
-        margin-right: 100px;
+        margin: 0 100px 0 67px;
         background: url("~@/assets/eyecare/bitmap.png") no-repeat;
         background-size: cover;
       }
@@ -334,12 +336,15 @@
       }
     }
     .free-exp {
-      padding: 23px 0;
       text-align: center;
-      background-color: #006d33;
       font-size: 24px;
       line-height: 34px;
       color: #faf005;
+      a {
+        background-color: #006d33;
+        padding: 23px 0;
+        display: block;
+      }
     }
   }
 }
@@ -631,7 +636,6 @@
           font-size: .14rem;
           line-height: .22rem;
           color: #999;
-          text-indent: .13rem;
         }
       }
     }

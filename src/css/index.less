@@ -1,13 +1,13 @@
 @media (min-width: 750px) {
   #home {
     background: #fff;
-    width: 1366px;
-    margin :0 auto;
     .margin {
       width: 1200px;
       margin: 0 auto;
     }
     .banner {
+      width: 1366px;
+      margin :0 auto;
       background: url("../assets/home/banner.png") no-repeat;
       background-size: cover;
       height: 460px;
@@ -123,6 +123,8 @@
             float: left;
             border-radius: 8px;
             transition: all .5s;
+            height: 452px;
+            background: #fff;
             &:hover {
               box-shadow: 0 10px 16px 0 rgba(0,0,0,.1);
               transition: all .5s;
@@ -179,18 +181,12 @@
             .pic-same {
               width: 368px;
               height: 207px;
-            }
-            .study1-img {
-              background:url("../assets/home/pic-1.png") no-repeat;
-              background-size: cover;
-            }
-            .study2-img {
-              background:url("../assets/home/pic-2.png") no-repeat;
-              background-size: cover;
-            }
-            .study3-img {
-              background:url("../assets/home/pic-3.png") no-repeat;
-              background-size: cover;
+              img {
+                width: 368px;
+                height: 207px;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+              }
             }
           }
         }
@@ -357,6 +353,7 @@
             box-shadow: 0 .04rem .16rem 0 rgba(0, 0, 0, 0.08);
             margin-top: .24rem;
             transition: all .5s;
+            height: 4.33rem;
             &:nth-child(1) {
               p {
                 &:nth-child(2) {
@@ -408,18 +405,12 @@
             .pic-same {
               width: 3.27rem;
               height: 2.07rem;
-            }
-            .study1-img {
-              background:url("../assets/h5home/pic-1.png") no-repeat;
-              background-size: cover;
-            }
-            .study2-img {
-              background:url("../assets/h5home/pic-2.png") no-repeat;
-              background-size: cover;
-            }
-            .study3-img {
-              background:url("../assets/h5home/pic-3.png") no-repeat;
-              background-size: cover;
+              img {
+                width: 3.27rem;
+                height: 2.07rem;
+                border-top-left-radius: .08rem;
+                border-top-right-radius: .08rem; 
+              }
             }
           }
         }
@@ -436,7 +427,8 @@
         .eye-discuss-cl {
           width: 3.27rem;
           height: 1.59rem;
-          border-radius: .06rem;
+          border-top-left-radius: .06rem;
+          border-top-right-radius: .06rem;
           background: url("../assets/h5home/mask.png") no-repeat;
           background-size: cover;
         }
